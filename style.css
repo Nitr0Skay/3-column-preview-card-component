@@ -1,3 +1,9 @@
+*::before, *, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   /*  Primary Colors  */
   --brightOrange: hsl(31, 77%, 52%);
@@ -11,6 +17,10 @@
 
 body {
   font-size: 15px;
+  background-color: white;
+  width: 100vh;
+  height: auto;
+  position: relative;
 }
 
 header, footer {
@@ -21,4 +31,47 @@ header, footer {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+main {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 920px;
+
+}
+
+main section {
+  padding: 5%;
+}
+
+.section-title {
+  text-transform: uppercase;
+  color: var(--veryLightGray);
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 37.5%;
+}
+
+.section-title + p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--transparentWhite);
+}
+
+.sedan {
+ --mainColor: var(--brightOrange);
+  background: var(--mainColor) url(images/icon-sedans.svg) no-repeat 20% 20%;
+}
+
+.suv {
+ --mainColor: var(--darkCyan);
+  background: var(--mainColor) url(images/icon-suvs.svg) no-repeat 20% 20%;
+}
+
+.luxury {
+ --mainColor: var(--veryDarkCyan);
+  background: var(--mainColor) url(images/icon-luxury.svg) no-repeat 20% 20%;
 }
