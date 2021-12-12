@@ -18,9 +18,7 @@
 body {
   font-size: 15px;
   background-color: white;
-  width: 100vh;
-  height: auto;
-  position: relative;
+  width: 100vw;
 }
 
 header, footer {
@@ -35,16 +33,17 @@ header, footer {
 
 main {
   display: flex;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 920px;
-
+  width: 63.88888888%;  /*should be 920 at 1440 vw;*/
+  line-height: 2em;
 }
 
 main section {
-  padding: 5%;
+  padding: 48px;
+  flex: 1 1 0;
 }
 
 .section-title {
@@ -52,26 +51,67 @@ main section {
   color: var(--veryLightGray);
   font-family: 'Big Shoulders Display', cursive;
   font-weight: 700;
-  font-size: 2rem;
-  margin-top: 37.5%;
+  font-size: 2.5em;
+  margin-top: 40%;
 }
 
 .section-title + p {
   font-family: 'Lexend Deca', sans-serif;
   color: var(--transparentWhite);
+  /*margin: 40px 0;*/
+}
+
+.info-button {
+  font-family: 'Lexend Deca', sans-serif;
+  display: block;
+  text-decoration: none;
+  color: var(--mainColor);
+  background: white;
+  border-radius: 28px;
+  padding: 10px;
+  text-align: center;
+  width: 69%;  /*should be 140-145px at 1440 vw*/
+  transition: 0.5s;
+  border: 3px solid white;
+  margin-top: 40%;
+}
+
+section * {
+  margin-top: 40px;
 }
 
 .sedan {
  --mainColor: var(--brightOrange);
-  background: var(--mainColor) url(images/icon-sedans.svg) no-repeat 20% 20%;
+  background: var(--mainColor) url(images/icon-sedans.svg) no-repeat 20% 10%;
 }
 
 .suv {
  --mainColor: var(--darkCyan);
-  background: var(--mainColor) url(images/icon-suvs.svg) no-repeat 20% 20%;
+  background: var(--mainColor) url(images/icon-suvs.svg) no-repeat 20% 10%;
 }
 
 .luxury {
  --mainColor: var(--veryDarkCyan);
-  background: var(--mainColor) url(images/icon-luxury.svg) no-repeat 20% 20%;
+  background: var(--mainColor) url(images/icon-luxury.svg) no-repeat 20% 10%;
+}
+
+
+/*  Active State  */
+
+.info-button:hover {
+  background: var(--mainColor);
+  color: white;
+}
+
+
+@media (max-width: 769px) {
+    main {
+      flex-flow: row wrap;
+      transform: translate(-50%, -15%);
+      width: 86.666%;
+    }
+
+    .info-button {
+      margin-top: 20%;
+    }
 }
