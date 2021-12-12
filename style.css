@@ -95,6 +95,9 @@ section * {
   background: var(--mainColor) url(images/icon-luxury.svg) no-repeat 20% 10%;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
 
 /*  Active State  */
 
