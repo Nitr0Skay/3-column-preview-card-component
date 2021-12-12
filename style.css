@@ -68,7 +68,7 @@ main section {
   color: var(--mainColor);
   background: white;
   border-radius: 28px;
-  padding: 10px;
+  padding: 1em;
   text-align: center;
   width: 69%;  /*should be 140-145px at 1440 vw*/
   transition: 0.5s;
